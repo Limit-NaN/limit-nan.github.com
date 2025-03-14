@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('/assets/fonts/QFKT.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: 'MyCustomFont', sans-serif;
+}
