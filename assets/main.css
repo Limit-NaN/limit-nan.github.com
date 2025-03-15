@@ -7,3 +7,8 @@
 body {
   font-family: 'MyCustomFont', sans-serif;
 }
+
+body{
+  background:black;
+  color:white;
+}
