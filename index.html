@@ -1,0 +1,221 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zephroth-Duskfang 的博客</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+		*{
+			font-family: "QFKT";
+		}
+        body {
+            background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+            color: #e2e8f0;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            top: 0;
+            left: 0;
+        }
+        .content {
+            position: relative;
+            z-index: 1;
+        }
+        .blog-card {
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #818cf8;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js" style="z-index: 99999;"></div>
+    
+    <div class="content container mx-auto px-4 py-8">
+        <nav class="flex justify-between items-center mb-12">
+            <div class="text-2xl font-bold text-indigo-300">Zephroth-Duskfang 的博客</div>
+            <div class="flex space-x-6">
+                <a href="limit-nan.github.com" class="nav-link text-indigo-200 hover:text-white">首页</a>
+                <a href="limit-nan.github.com/article" class="nav-link text-indigo-200 hover:text-white">文章</a>
+                <a href="#" class="nav-link text-indigo-200 hover:text-white">联系</a>
+            </div>
+        </nav>
+        <header class="text-center mb-16">
+            <h1 class="text-4xl font-bold mb-4 text-white">Zephroth-Duskfang 的博客</h1>
+            <p class="text-xl text-indigo-200 max-w-2xl mx-auto">
+				学习与开发让生活充满存在
+			</p>
+        </header>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <!-- <div class="blog-card rounded-lg overflow-hidden shadow-lg p-6">
+                <div class="flex items-center mb-4">
+                    <span class="bg-indigo-500 text-white text-xs px-2 py-1 rounded">技术</span>
+                    <span class="text-indigo-300 text-sm ml-4">202X-XX-XX</span>
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-white">C++ RSA 包装exe</h3>
+                <p class="text-indigo-200 mb-4">简易小质数加密...</p>
+                <a href="#" class="text-indigo-400 hover:text-indigo-300 flex items-center">
+                    阅读更多 <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+            <div class="blog-card rounded-lg overflow-hidden shadow-lg p-6">
+                <div class="flex items-center mb-4">
+                    <span class="bg-indigo-500 text-white text-xs px-2 py-1 rounded">技术</span>
+                    <span class="text-indigo-300 text-sm ml-4">202X-XX-XX</span>
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-white">手搓 C++ __int256,__int512</h3>
+                <p class="text-indigo-200 mb-4">通过 bit 串联实现 __int128...</p>
+                <a href="#" class="text-indigo-400 hover:text-indigo-300 flex items-center">
+                    阅读更多 <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div> -->
+        </div>
+        <footer class="text-center mb-16">
+			<a herf="#" class="text-xl text-indigo-200 hover:text-indigo-300 max-w-2xl mx-auto ">
+				查看更多...
+			</a>
+		</footer>
+    </div>
+
+    <!-- 粒子效果库 -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        // 初始化粒子效果
+        document.addEventListener('DOMContentLoaded', function() {
+            particlesJS('particles-js', {
+                "particles": {
+                    "number": {
+                        "value": 80,
+                        "density": {
+                            "enable": true,
+                            "value_area": 800
+                        }
+                    },
+                    "color": {
+                        "value": "#818cf8"
+                    },
+                    "shape": {
+                        "type": "circle",
+                        "stroke": {
+                            "width": 0,
+                            "color": "#000000"
+                        },
+                        "polygon": {
+                            "nb_sides": 5
+                        }
+                    },
+                    "opacity": {
+                        "value": 0.5,
+                        "random": false,
+                        "anim": {
+                            "enable": false,
+                            "speed": 1,
+                            "opacity_min": 0.1,
+                            "sync": false
+                        }
+                    },
+                    "size": {
+                        "value": 3,
+                        "random": true,
+                        "anim": {
+                            "enable": false,
+                            "speed": 40,
+                            "size_min": 0.1,
+                            "sync": false
+                        }
+                    },
+                    "line_linked": {
+                        "enable": true,
+                        "distance": 150,
+                        "color": "#818cf8",
+                        "opacity": 0.4,
+                        "width": 1
+                    },
+                    "move": {
+                        "enable": true,
+                        "speed": 2,
+                        "direction": "none",
+                        "random": false,
+                        "straight": false,
+                        "out_mode": "out",
+                        "bounce": false,
+                        "attract": {
+                            "enable": false,
+                            "rotateX": 600,
+                            "rotateY": 1200
+                        }
+                    }
+                },
+                "interactivity": {
+                    "detect_on": "canvas",
+                    "events": {
+                        "onhover": {
+                            "enable": true,
+                            "mode": "grab"
+                        },
+                        "onclick": {
+                            "enable": true,
+                            "mode": "push"
+                        },
+                        "resize": true
+                    },
+                    "modes": {
+                        "grab": {
+                            "distance": 140,
+                            "line_linked": {
+                                "opacity": 1
+                            }
+                        },
+                        "bubble": {
+                            "distance": 400,
+                            "size": 40,
+                            "duration": 2,
+                            "opacity": 8,
+                            "speed": 3
+                        },
+                        "repulse": {
+                            "distance": 200,
+                            "duration": 0.4
+                        },
+                        "push": {
+                            "particles_nb": 4
+                        },
+                        "remove": {
+                            "particles_nb": 2
+                        }
+                    }
+                },
+                "retina_detect": true
+            });
+        });
+    </script>
+</body>
+</html>
